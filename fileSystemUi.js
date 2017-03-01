@@ -192,6 +192,7 @@ UI.prototype.createFile = function () {
     }
 
 UI.prototype.createFolder = function () {
+    debugger;
     var id = $('.right-click-menu').data('id');
     if(id == undefined){
         id = currentFolder.id;

@@ -4,7 +4,7 @@ FileSystem = (function () {
 var fsFlatArray = [];
 var fs=[];
 var findLastId = [];
-var lastId;
+var lastId = 0;
 var self;
 
 function FileSystem() {
@@ -47,7 +47,9 @@ FileSystem.prototype.restoreFileSystem = function(fsFlatArray ) {
         }
     }
     var highestId = Math.max.apply(Math, findLastId);
+    if(highestId){
     lastId = highestId;
+    }
     return tempArray[0];
 }
 
