@@ -199,11 +199,7 @@ UI.prototype.createFolder = function () {
         currentFolder = findById(myRoot, id);
     }
     var newName = prompt('Enter name of folder to add');
-
-
-
-
-    if (newName == null) {
+      if (newName == null) {
         return;
     } else if (newName == '') {
         newName = undefined;
@@ -301,6 +297,12 @@ UI.prototype.open = function(id){
                  }
         });
 
+}
+
+UI.prototype.clearFileContent = function() {
+    $('textarea').val('');
+    $('textarea').focus();
+    this.content = '';
 }
 
 UI.prototype.setRightClickMenu = function() {
